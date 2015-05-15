@@ -166,7 +166,8 @@ public class GuiMemory : MonoBehaviour {
 
 	private IEnumerator photoGo ()
 	{
-		
+
+		#if UNITY_ANDROID
 		
 		string namePhoto  = "Mirabilar" + System.DateTime.Now.Day+System.DateTime.Now.Month + System.DateTime.Now.Year + System.DateTime.Now.Hour+ System.DateTime.Now.Minute + System.DateTime.Now.Second+".png";
 		
@@ -185,7 +186,7 @@ public class GuiMemory : MonoBehaviour {
 		refreshGallery.CallStatic("NewRefreshG",new object[2]{jo,joString});				
 		
 
-		
+		#endif
 		
 		
 		yield return 0;

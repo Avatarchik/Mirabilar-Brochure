@@ -25,7 +25,7 @@ public class GUITour : MonoBehaviour {
 
 	private IEnumerator photoGo ()
 	{
-		
+		#if UNITY_ANDROID
 		
 		string namePhoto  = "Mirabilar" + System.DateTime.Now.Day+System.DateTime.Now.Month + System.DateTime.Now.Year + System.DateTime.Now.Hour+ System.DateTime.Now.Minute + System.DateTime.Now.Second+".png";
 		
@@ -45,7 +45,7 @@ public class GUITour : MonoBehaviour {
 			
 			Application.OpenURL (Application.persistentDataPath+"/"+namePhoto);
 
-		
+		#endif
 		
 		yield return 0;
 	}

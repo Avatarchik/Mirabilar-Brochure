@@ -128,6 +128,8 @@ public class GUITurismoCultura : MonoBehaviour {
 		yield return 0;
 	}
 
+	#if UNITY_ANDROID
+
 	class ScanCallback : AndroidJavaProxy
 	{
 		public ScanCallback() : base("android.media.MediaScannerConnection$OnScanCompletedListener") { }
@@ -137,6 +139,7 @@ public class GUITurismoCultura : MonoBehaviour {
 			
 		}
 	}
+	#endif
 
 	private IEnumerator infoGo () {
 		
@@ -151,7 +154,7 @@ public class GUITurismoCultura : MonoBehaviour {
 
 	private IEnumerator photoGo ()
 	{
-
+		#if UNITY_ANDROID
 			
 		String namePhoto  = "Mirabilar" + System.DateTime.Now.Day+System.DateTime.Now.Month + System.DateTime.Now.Year + System.DateTime.Now.Hour+ System.DateTime.Now.Minute + System.DateTime.Now.Second+".png";
 			
@@ -221,6 +224,8 @@ public class GUITurismoCultura : MonoBehaviour {
 		{
 			sDebug = e.Message;
 		}
+
+		#endif
 
 		yield return 0;
 	}

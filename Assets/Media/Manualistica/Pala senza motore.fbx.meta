@@ -1,0 +1,161 @@
+fileFormatVersion: 2
+guid: 1da6d2f25ab356d4da3183fc57cd467a
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: base_1
+    100002: Cap
+    100004: Cap.2
+    100006: Cap.3
+    100008: Cone
+    100010: Loft NURBS
+    100012: Loft NURBS.2
+    100014: Loft NURBS.3
+    100016: Null.1.2
+    100018: Null.2.2
+    100020: Null.3
+    100022: Null.3.2
+    100024: Null.4
+    100026: Null.5
+    100028: //RootNode
+    100030: pale
+    100032: Rounding
+    100034: Rounding.2
+    100036: Rounding.3
+    100038: scocca
+    100040: Spline
+    100042: Spline.1
+    100044: Spline.1.2
+    100046: Spline.1.3
+    100048: Spline.2
+    100050: Spline.3
+    100052: Spline.3.2
+    100054: Spline.3.3
+    100056: Spline.3.4
+    100058: Spline.4
+    100060: Spline.5
+    100062: Spline.6
+    400000: base_1
+    400002: Cap
+    400004: Cap.2
+    400006: Cap.3
+    400008: Cone
+    400010: Loft NURBS
+    400012: Loft NURBS.2
+    400014: Loft NURBS.3
+    400016: Null.1.2
+    400018: Null.2.2
+    400020: Null.3
+    400022: Null.3.2
+    400024: Null.4
+    400026: Null.5
+    400028: //RootNode
+    400030: pale
+    400032: Rounding
+    400034: Rounding.2
+    400036: Rounding.3
+    400038: scocca
+    400040: Spline
+    400042: Spline.1
+    400044: Spline.1.2
+    400046: Spline.1.3
+    400048: Spline.2
+    400050: Spline.3
+    400052: Spline.3.2
+    400054: Spline.3.3
+    400056: Spline.3.4
+    400058: Spline.4
+    400060: Spline.5
+    400062: Spline.6
+    2300000: base_1
+    2300002: Cap
+    2300004: Cap.2
+    2300006: Cap.3
+    2300008: Cone
+    2300010: Loft NURBS
+    2300012: Loft NURBS.2
+    2300014: Loft NURBS.3
+    2300016: Rounding
+    2300018: Rounding.2
+    2300020: Rounding.3
+    2300022: scocca
+    3300000: base_1
+    3300002: Cap
+    3300004: Cap.2
+    3300006: Cap.3
+    3300008: Cone
+    3300010: Loft NURBS
+    3300012: Loft NURBS.2
+    3300014: Loft NURBS.3
+    3300016: Rounding
+    3300018: Rounding.2
+    3300020: Rounding.3
+    3300022: scocca
+    4300000: Cone
+    4300002: Loft NURBS
+    4300004: Rounding
+    4300006: Cap
+    4300008: Loft NURBS.2
+    4300010: Rounding.2
+    4300012: Cap.2
+    4300014: Loft NURBS.3
+    4300016: Rounding.3
+    4300018: Cap.3
+    4300020: base_1
+    4300022: scocca
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

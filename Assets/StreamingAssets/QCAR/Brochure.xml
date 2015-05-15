@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="copertina_brochure" size="120.000000 84.580643" />
+    <ImageTarget name="Copertina" size="120.000000 83.495148" />
+    <ImageTarget name="TurismoCultura" size="120.000000 85.227272" />
+    <ImageTarget name="Marketing" size="120.000000 83.754044" />
+    <ImageTarget name="Manualistica" size="120.000000 85.297691" />
+    <ImageTarget name="formazione" size="120.000000 85.547447" />
+    <ImageTarget name="Editoria" size="120.000000 83.534485" />
+    <ImageTarget name="ApplicazioniIndustriali" size="120.000000 83.585312" />
+  </Tracking>
+</QCARConfig>

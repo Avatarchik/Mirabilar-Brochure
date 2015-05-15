@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Vuoto.unity
+  - enabled: 0
+    path: Assets/Manualistica.unity
+  - enabled: 0
+    path: Assets/TurismoCultura.unity
+  - enabled: 0
+    path: Assets/Marketing.unity
+  - enabled: 0
+    path: Assets/Memory.unity
+  - enabled: 0
+    path: Assets/Editoria.unity
+  - enabled: 0
+    path: Assets/Copertina.unity
+  - enabled: 0
+    path: Assets/ApplicazioniIndustriali.unity
+  - enabled: 1
+    path: Assets/Tour.unity
+  - enabled: 0
+    path: Assets/Scenes/Vuforia-MultiTargets.unity
+  - enabled: 0
+    path: Assets/ProvaMonoVuforia.unity
+  - enabled: 1
+    path: Assets/Brochure Vuforia 2.unity

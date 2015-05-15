@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="Marketing" size="927.000000 647.000000" />
+    <ImageTarget name="Manualistica" size="823.000000 585.000000" />
+    <ImageTarget name="formazione" size="822.000000 586.000000" />
+    <ImageTarget name="Editoria" size="928.000000 646.000000" />
+    <ImageTarget name="Copertina" size="927.000000 645.000000" />
+    <ImageTarget name="ApplicazioniIndustriali" size="926.000000 645.000000" />
+    <ImageTarget name="TurismoCultura" size="176.000000 125.000000" />
+	
+	<MultiTarget name="Prova">
+      <Part name="Marketing" translation="0 0 0" rotation="AD: 1 0 0 0"/>
+      <Part name="Manualistica" translation="0 0 0" rotation="AD: 1 0 0 0"/>
+      <Part name="formazione" translation="0 0 0" rotation="AD: 1 0 0 0"/>
+      <Part name="Editoria" translation="0 0 0" rotation="AD: 1 0 0 0"/>
+      <Part name="Copertina" translation="0 0 0" rotation="AD: 1 0 0 0"/>
+      <Part name="ApplicazioniIndustriali" translation="0 0 0" rotation="AD: 1 0 0 0"/>
+	  <Part name="TurismoCultura" translation="0 0 0" rotation="AD: 1 0 0 0"/>
+    </MultiTarget>
+	
+  </Tracking>
+</QCARConfig>

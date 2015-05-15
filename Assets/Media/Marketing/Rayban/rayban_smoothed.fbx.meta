@@ -1,0 +1,163 @@
+fileFormatVersion: 2
+guid: 52d847e835b0eeb4cb2d19e74abd1255
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: deco_1
+    100002: deco_2
+    100004: group2
+    100006: group3
+    100008: group4
+    100010: lente_1
+    100012: lente_2
+    100014: lente_3
+    100016: lente_4
+    100018: occhiali_astina
+    100020: occhiali_astina1
+    100022: occhiali_lenti
+    100024: porta_vite1
+    100026: porta_vite2
+    100028: porta_vite3
+    100030: porta_vite4
+    100032: porta_vite_lenti
+    100034: porta_vite_lenti1
+    100036: //RootNode
+    100038: vite
+    100040: vite 1
+    100042: vite1
+    100044: vite1 1
+    400000: deco_1
+    400002: deco_2
+    400004: group2
+    400006: group3
+    400008: group4
+    400010: lente_1
+    400012: lente_2
+    400014: lente_3
+    400016: lente_4
+    400018: occhiali_astina
+    400020: occhiali_astina1
+    400022: occhiali_lenti
+    400024: porta_vite1
+    400026: porta_vite2
+    400028: porta_vite3
+    400030: porta_vite4
+    400032: porta_vite_lenti
+    400034: porta_vite_lenti1
+    400036: //RootNode
+    400038: vite
+    400040: vite 1
+    400042: vite1
+    400044: vite1 1
+    2300000: deco_1
+    2300002: deco_2
+    2300004: lente_1
+    2300006: lente_2
+    2300008: lente_3
+    2300010: lente_4
+    2300012: occhiali_astina
+    2300014: occhiali_astina1
+    2300016: occhiali_lenti
+    2300018: porta_vite1
+    2300020: porta_vite2
+    2300022: porta_vite3
+    2300024: porta_vite4
+    2300026: porta_vite_lenti
+    2300028: porta_vite_lenti1
+    2300030: vite
+    2300032: vite 1
+    2300034: vite1
+    2300036: vite1 1
+    3300000: deco_1
+    3300002: deco_2
+    3300004: lente_1
+    3300006: lente_2
+    3300008: lente_3
+    3300010: lente_4
+    3300012: occhiali_astina
+    3300014: occhiali_astina1
+    3300016: occhiali_lenti
+    3300018: porta_vite1
+    3300020: porta_vite2
+    3300022: porta_vite3
+    3300024: porta_vite4
+    3300026: porta_vite_lenti
+    3300028: porta_vite_lenti1
+    3300030: vite
+    3300032: vite 1
+    3300034: vite1
+    3300036: vite1 1
+    4300000: occhiali_astina
+    4300002: porta_vite3
+    4300004: vite
+    4300006: vite1
+    4300008: porta_vite4
+    4300010: porta_vite_lenti1
+    4300012: porta_vite2
+    4300014: vite
+    4300016: porta_vite1
+    4300018: vite1
+    4300020: porta_vite_lenti
+    4300022: lente_1
+    4300024: lente_2
+    4300026: deco_1
+    4300028: deco_2
+    4300030: occhiali_astina1
+    4300032: occhiali_lenti
+    4300034: lente_3
+    4300036: lente_4
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

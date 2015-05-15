@@ -1,0 +1,8 @@
+codice da incorporare:
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/GLEJgVSL0Ac" frameborder="0" allowfullscreen></iframe>
+
+
+preso da:
+
+https://www.youtube.com/watch?v=GLEJgVSL0Ac

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using metaio;
+
 
 public class GuiMemory : MonoBehaviour {
 

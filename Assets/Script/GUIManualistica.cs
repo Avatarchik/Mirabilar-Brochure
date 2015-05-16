@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using metaio;
 
 public class GUIManualistica : MonoBehaviour {
 

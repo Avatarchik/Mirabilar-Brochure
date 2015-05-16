@@ -2,7 +2,7 @@ Vuforia Augmented Reality SDK Release Package
 ==============================================
 
 It is recommended that use of the Unity Extensions for Vuforia be employed with the 
-4.5.x version (or later) of the Unity Editor and Runtime.
+4.6.x version (or later) of the Unity Editor and Runtime.
 
 To get started, go to https://developer.vuforia.com, where you will find detailed 
 documentation on developing AR apps using the Vuforia SDK, and a brief description 

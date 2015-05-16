@@ -113,6 +113,12 @@ namespace Vuforia
                         "This App license key has been cancelled " + 
                         "and may no longer be used. Please get a new license key.";
                     break;
+                case QCARUnity.InitError.INIT_LICENSE_ERROR_PRODUCT_TYPE_MISMATCH:
+                    mErrorText =
+                        "Vuforia App key is not valid for this product. Please get a valid key, "+
+                        "by logging into your account at developer.vuforia.com and choosing the "+
+                        "right product type during project creation";
+                    break;
     #if (UNITY_IPHONE || UNITY_IOS)
                 case QCARUnity.InitError.INIT_NO_CAMERA_ACCESS:
                     mErrorText = 

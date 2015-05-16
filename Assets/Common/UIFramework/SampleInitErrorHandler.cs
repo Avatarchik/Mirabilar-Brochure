@@ -180,6 +180,13 @@ public class SampleInitErrorHandler : MonoBehaviour
             case QCARUnity.InitError.INIT_ERROR:
                 mCurrentError.Text = "Failed to initialize QCAR.";
                 break;
+
+            case QCARUnity.InitError.INIT_LICENSE_ERROR_PRODUCT_TYPE_MISMATCH:
+                mCurrentError.Text =
+                    "Vuforia App key is not valid for this product. Please get a valid key, " +
+                    "by logging into your account at developer.vuforia.com and choosing the " +
+                    "right product type during project creation";
+                break;
         }
     }
 

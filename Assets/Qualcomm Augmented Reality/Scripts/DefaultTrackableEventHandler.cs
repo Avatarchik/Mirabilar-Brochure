@@ -17,7 +17,6 @@ namespace Vuforia
         #region PRIVATE_MEMBER_VARIABLES
  
         private TrackableBehaviour mTrackableBehaviour;
-		private GestCallBack callBack;
     
         #endregion // PRIVATE_MEMBER_VARIABLES
 
@@ -27,7 +26,6 @@ namespace Vuforia
     
         void Start()
         {
-			callBack = GameObject.Find("GUI").GetComponent<GestCallBack> ();
             mTrackableBehaviour = GetComponent<TrackableBehaviour>();
             if (mTrackableBehaviour)
             {
@@ -86,22 +84,6 @@ namespace Vuforia
             }
 
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
-			
-			if (mTrackableBehaviour.TrackableName == "TurismoCultura")
-				callBack.cos = 1;
-			else if (mTrackableBehaviour.TrackableName == "Copertina")
-				callBack.cos = 2;
-			else if (mTrackableBehaviour.TrackableName == "Marketing")
-				callBack.cos = 7;
-			else if (mTrackableBehaviour.TrackableName == "Manualistica")
-				callBack.cos = 6;
-			else if (mTrackableBehaviour.TrackableName == "formazione")
-				callBack.cos = 4;
-			else if (mTrackableBehaviour.TrackableName == "ApplicazioniIndustriali")
-				callBack.cos = 3;
-			else if (mTrackableBehaviour.TrackableName == "Editoria")
-				callBack.cos = 5;
-
         }
 
 
@@ -123,7 +105,6 @@ namespace Vuforia
             }
 
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
-			callBack.cos = 0;
         }
 
         #endregion // PRIVATE_METHODS

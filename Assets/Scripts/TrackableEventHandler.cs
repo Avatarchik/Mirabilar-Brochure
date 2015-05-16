@@ -18,7 +18,6 @@ public class TrackableEventHandler : MonoBehaviour,
     private bool mHasBeenFound = false;
     private bool mLostTracking;
     private float mSecondsSinceLost;
-	private GestCallBack callBack;
 
     #endregion // PRIVATE_MEMBER_VARIABLES
 
@@ -28,7 +27,6 @@ public class TrackableEventHandler : MonoBehaviour,
 
     void Start()
     {
-		callBack = GameObject.Find("GUI").GetComponent<GestCallBack> ();
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (mTrackableBehaviour)
         {
@@ -41,23 +39,10 @@ public class TrackableEventHandler : MonoBehaviour,
 
     void Update()
     {
-//		if (Input.touchCount>0 && Input.GetTouch(0).phase == TouchPhase.Began)
-//		{
-//			VideoPlaybackBehaviour video = GetComponentInChildren<VideoPlaybackBehaviour>();
-//			if (video != null &&
-//			 video.CurrentState == VideoPlayerHelper.MediaState.PLAYING )
-//				video.VideoPlayer.Pause();
-//
-//			else if (video != null &&
-//			         video.CurrentState == VideoPlayerHelper.MediaState.PAUSED)
-//				video.VideoPlayer.Play(false,video.VideoPlayer.GetCurrentPosition());
-//				
-//		}
-
         // Pause the video if tracking is lost for more than two seconds
         if (mHasBeenFound && mLostTracking)
         {
-            if (mSecondsSinceLost > 0.5f)
+            if (mSecondsSinceLost > 2.0f)
             {
                 VideoPlaybackBehaviour video = GetComponentInChildren<VideoPlaybackBehaviour>();
                 if (video != null &&
@@ -71,8 +56,6 @@ public class TrackableEventHandler : MonoBehaviour,
 
             mSecondsSinceLost += Time.deltaTime;
         }
-
-		InputController.UpdateInput ();
     }
 
     #endregion // UNITY_MONOBEHAVIOUR_METHODS
@@ -157,10 +140,6 @@ public class TrackableEventHandler : MonoBehaviour,
 
         mHasBeenFound = true;
         mLostTracking = false;
-
-		if (mTrackableBehaviour.TrackableName == "Editoria")
-			callBack.cos = 5;
-
     }
 
 
@@ -185,7 +164,6 @@ public class TrackableEventHandler : MonoBehaviour,
 
         mLostTracking = true;
         mSecondsSinceLost = 0;
-		callBack.cos = 0;
     }
 
 

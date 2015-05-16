@@ -32,7 +32,7 @@ public class PlayVideo : MonoBehaviour
         //in order to display the UI menu options properly
 #if UNITY_ANDROID
         if(!tf) {
-            Screen.orientation = ScreenOrientation.LandscapeLeft;
+            Screen.orientation = ScreenOrientation.Portrait;
         }
 #endif
     }
@@ -49,7 +49,7 @@ public class PlayVideo : MonoBehaviour
     {
         if (Screen.orientation != ScreenOrientation.Portrait)
         {
-			Screen.orientation = ScreenOrientation.LandscapeLeft;
+            Screen.orientation = ScreenOrientation.Portrait;
         }
     }
     /// <summary>
@@ -138,7 +138,7 @@ public class PlayVideo : MonoBehaviour
     
     public static IEnumerator PlayFullscreenVideoAtEndOfFrame(VideoPlaybackBehaviour video)
     {
-		Screen.orientation = ScreenOrientation.LandscapeLeft;
+        Screen.orientation = ScreenOrientation.AutoRotation;
         Screen.autorotateToPortrait = true;
         Screen.autorotateToPortraitUpsideDown = true;
         Screen.autorotateToLandscapeLeft = true;

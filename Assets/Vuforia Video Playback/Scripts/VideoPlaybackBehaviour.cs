@@ -209,6 +209,7 @@ public class VideoPlaybackBehaviour : MonoBehaviour
                 if (isPlayableOnTexture)
                 {
                     // Pass the video texture id to the video player
+                    // TODO: GetNativeTextureID() call needs to be moved to Awake method to work with Oculus SDK if MT rendering is enabled
                     int nativeTextureID = mVideoTexture.GetNativeTextureID();
                     mVideoPlayer.SetVideoTextureID(nativeTextureID);
 
@@ -439,11 +440,11 @@ public class VideoPlaybackBehaviour : MonoBehaviour
             yield return new WaitForSeconds (1.0f);
 
             // then finally we reset to Portrait
-			Screen.orientation = ScreenOrientation.LandscapeLeft;
+            Screen.orientation = ScreenOrientation.Portrait;
         } else {
             // the screen orientation was already != Portrait
             // so we can reset to Portrait immediately
-			Screen.orientation = ScreenOrientation.LandscapeLeft;
+            Screen.orientation = ScreenOrientation.Portrait;
         }
     }
 

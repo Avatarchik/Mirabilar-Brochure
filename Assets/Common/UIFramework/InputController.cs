@@ -68,7 +68,7 @@ public class InputController {
                         // it's a double tap
                         if (InputController.DoubleTapped != null)
                         {
-                            //InputController.DoubleTapped();
+                            InputController.DoubleTapped();
                         }
                         Debug.Log ("Double Tap Registered");
                         tapEventDispatched = true;

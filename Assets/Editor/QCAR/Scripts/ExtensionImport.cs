@@ -52,18 +52,6 @@ namespace Vuforia.EditorClasses
                     PlayerSettings.Android.androidTVCompatibility = false;
                 }
 #endif
-                // check if Graphics API is set to OpenGL ES 2.0
-                if (PlayerSettings.targetGlesGraphics == TargetGlesGraphics.OpenGLES_3_0)
-                {
-                    Debug.Log("Setting Graphics API to OpenGL ES 2.0.");
-                    PlayerSettings.targetGlesGraphics = TargetGlesGraphics.OpenGLES_2_0;
-                    
-                    if (PlayerSettings.targetGlesGraphics != TargetGlesGraphics.OpenGLES_2_0)
-                    {
-                        Debug.LogWarning("Failed to set Graphics API to OpenGL ES 2.0. Please make sure to set this manually in the " +
-                                         "player settings, for compatibility with Vuforia.");
-                    }
-                }
 
                 // Here we set the scripting define symbols for Android
                 // so we can remember that the settings were set once.
@@ -75,7 +63,7 @@ namespace Vuforia.EditorClasses
             iOSSymbols = iOSSymbols ?? "";
             if (!iOSSymbols.Contains(VUFORIA_IOS_SETTINGS))
             {
-#if UNITY_5_1 || UNITY_5_0 || UNITY_4_9 || UNITY_4_8 || UNITY_4_7 || (UNITY_4_6 && !UNITY_4_6_1 && !UNITY_4_6_2)
+#if UNITY_5_0 || UNITY_4_9 || UNITY_4_8 || UNITY_4_7 || (UNITY_4_6 && !UNITY_4_6_1 && !UNITY_4_6_2)
                 // check if Graphics API for iOS is set to Metal or Automatic
                 if ((PlayerSettings.targetIOSGraphics == TargetIOSGraphics.Automatic) ||
                     (PlayerSettings.targetIOSGraphics == TargetIOSGraphics.Metal))
@@ -89,6 +77,11 @@ namespace Vuforia.EditorClasses
                                          "player settings, Vuforia does not support the Metal graphics API yet.");
                     }
                 }
+#elif UNITY_5_1
+                Debug.Log("Setting iOS Graphics API to OpenGL ES 2.0, Vuforia does not support Metal yet.");
+                PlayerSettings.SetGraphicsAPIs(
+                    BuildTarget.iOS,
+                    new UnityEngine.Rendering.GraphicsDeviceType[]{UnityEngine.Rendering.GraphicsDeviceType.OpenGLES2});
 #endif
 
 #if INCLUDE_IL2CPP

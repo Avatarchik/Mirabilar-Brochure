@@ -65,6 +65,13 @@ public class PostBuildProcessor : MonoBehaviour
 		proj.AddFrameworkToProject(target, "CoreMedia.framework", true);
 		proj.AddFrameworkToProject(target, "CoreVideo.framework", true);
 		proj.AddFrameworkToProject(target, "Security.framework", true);
+
+		proj.AddFrameworkToProject(target, "AudioToolbox.framework", true);
+		proj.AddFrameworkToProject(target, "CoreGraphics.framework", true);
+		proj.AddFrameworkToProject(target, "SystemConfiguration.framework", true);
+
+		proj.AddFrameworkToProject(target, "Accounts.framework", true);
+		proj.AddFrameworkToProject(target, "Social.framework", true);
 		
 		File.WriteAllText (projPath, proj.WriteToString ());
 		

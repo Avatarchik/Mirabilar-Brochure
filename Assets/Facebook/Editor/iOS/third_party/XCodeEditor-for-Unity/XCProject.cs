@@ -76,6 +76,10 @@ namespace UnityEditor.XCodeEditor
 				this.filePath = projects[ 0 ];
 			}
 
+			//prova
+			//this.filePath = filePath+"\\Unity-iPhone.xcodeproj";
+			//filePath = filePath+"\\Unity-iPhone.xcodeproj";
+
 			projectFileInfo = new FileInfo( Path.Combine( this.filePath, "project.pbxproj" ) );
 			string contents = projectFileInfo.OpenText().ReadToEnd();
 

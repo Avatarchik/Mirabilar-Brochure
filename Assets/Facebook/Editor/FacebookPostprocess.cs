@@ -10,9 +10,10 @@ namespace UnityEditor.FacebookEditor
 {
     public static class XCodePostProcess
     {
-        [PostProcessBuild(100)]
-        public static void OnPostProcessBuild(BuildTarget target, string path)
+		[PostProcessBuild(99999999)]
+		public static void OnPostProcessBuild(BuildTarget target, string path)
         {
+			path = System.IO.Path.GetFullPath(path);
             // If integrating with facebook on any platform, throw a warning if the app id is invalid
             if (!FBSettings.IsValidAppId)
             {

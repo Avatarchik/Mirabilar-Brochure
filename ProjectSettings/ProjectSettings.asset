@@ -123,6 +123,22 @@ PlayerSettings:
       m_Size: 48
     - m_Icon: {fileID: 2800000, guid: e8f18b17ad3246a4885eae61527d87b5, type: 3}
       m_Size: 36
+  - m_BuildTarget: iPhone
+    m_Icons:
+    - m_Icon: {fileID: 2800000, guid: 76fe126e545be8146869c3982f0b281d, type: 3}
+      m_Size: 152
+    - m_Icon: {fileID: 2800000, guid: e1585637c80d1ab47a7fae471dd21a35, type: 3}
+      m_Size: 144
+    - m_Icon: {fileID: 2800000, guid: c806a6e4cfdd66147af897782334f2bf, type: 3}
+      m_Size: 120
+    - m_Icon: {fileID: 2800000, guid: e6cb146c87fe34e428aa016ff7eb3d44, type: 3}
+      m_Size: 114
+    - m_Icon: {fileID: 2800000, guid: a564495b23000a24eb0eaa36428e33c0, type: 3}
+      m_Size: 76
+    - m_Icon: {fileID: 2800000, guid: f2fca27a186273249a6b8d1190a53711, type: 3}
+      m_Size: 72
+    - m_Icon: {fileID: 2800000, guid: da46e0d1459cb424fbf8e13e39747d08, type: 3}
+      m_Size: 57
   m_BuildTargetBatching:
   - m_BuildTarget: Android
     m_StaticBatching: 1

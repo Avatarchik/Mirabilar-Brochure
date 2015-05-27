@@ -49,7 +49,7 @@ public class PlayVideo : MonoBehaviour
     {
         if (Screen.orientation != ScreenOrientation.Portrait)
         {
-            Screen.orientation = ScreenOrientation.Portrait;
+           // Screen.orientation = ScreenOrientation.LandscapeLeft;
         }
     }
     /// <summary>

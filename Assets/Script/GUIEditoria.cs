@@ -114,7 +114,9 @@ public class GUIEditoria : MonoBehaviour {
 		}
 	
 
-
+		if (Input.touchCount > 0 && callBack.cos == 5)
+			// if tracking, then evaluate touch point
+			handleTouches();
 
 //		if (callBack.cos == 5)
 //		{

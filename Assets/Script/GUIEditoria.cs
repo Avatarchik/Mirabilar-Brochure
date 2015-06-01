@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Vuforia;
+
 
 public class GUIEditoria : MonoBehaviour {
 
@@ -150,7 +152,32 @@ public class GUIEditoria : MonoBehaviour {
 	{
 		// if there's touch points and the phase is began-->try to select the geometry
 		if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+		{
 			selectGameObject(Input.GetTouch(0).position);
+
+			myVideo = PickVideo(Input.mousePosition);
+			
+			if (myVideo != null)
+			{
+				VideoPlayerHelper.MediaState state =myVideo.VideoPlayer.GetStatus();
+				if (state == VideoPlayerHelper.MediaState.PAUSED ||
+				    state == VideoPlayerHelper.MediaState.READY ||
+				    state == VideoPlayerHelper.MediaState.STOPPED)
+				{
+					// Pause other videos before playing this one
+					//PauseOtherVideos(currentVideo);
+					
+					// Play this video on texture where it left off
+					myVideo.VideoPlayer.Play(false, myVideo.VideoPlayer.GetCurrentPosition());
+				}
+				
+				else if (state == VideoPlayerHelper.MediaState.PLAYING)
+				{
+					// Video is already playing, pause it
+					myVideo.VideoPlayer.Pause();
+				}
+			}
+		}
 		
 		// if the touch point is moving and metaio man is selected
 //		if(Input.GetTouch(0).phase == TouchPhase.Moved && selected)
@@ -309,6 +336,46 @@ public class GUIEditoria : MonoBehaviour {
 		yield return 0;
 	}
 
+	private VideoPlaybackBehaviour PickVideo(Vector3 screenPoint)
+	{
+		VideoPlaybackBehaviour[] videos = (VideoPlaybackBehaviour[])
+			FindObjectsOfType(typeof(VideoPlaybackBehaviour));
+		
+		GameObject go = QCARManager.Instance.ARCameraTransform.gameObject;
+		Camera[] cam = go.GetComponentsInChildren<Camera> ();
+		Ray ray = cam[0].ScreenPointToRay(screenPoint);
+		
+		RaycastHit hit = new RaycastHit();
+		
+		foreach (VideoPlaybackBehaviour video in videos)
+		{
+			if (video.GetComponent<Collider>().Raycast(ray, out hit, 10000))
+			{
+				return video;
+			}
+		}
+		
+		return null;
+	}
+
+	private void PauseAllVideos()
+	{
+		VideoPlaybackBehaviour[] videos = (VideoPlaybackBehaviour[])
+			FindObjectsOfType(typeof(VideoPlaybackBehaviour));
+		
+		foreach (VideoPlaybackBehaviour video in videos)
+		{
+
+
+				if (video.CurrentState == VideoPlayerHelper.MediaState.PLAYING)
+				{
+					video.VideoPlayer.Pause();
+				}
+
+
+		}
+	}
+
 	void OnGUI() {
 		
 		//		if(GUIUtilities.ButtonWithText(new Rect(
@@ -375,7 +442,7 @@ public class GUIEditoria : MonoBehaviour {
 				//Debug.Log("Clicked the button!"); BIOGRAFIA
 				stop = true;
 				//movieTexture.pause();
-				myVideo.VideoPlayer.Pause();
+				PauseAllVideos();
 				biografia = true;
 			}
 			
@@ -394,7 +461,7 @@ public class GUIEditoria : MonoBehaviour {
 				//Debug.Log("Clicked the button!");SHOPPING
 				stop = true;
 				//movieTexture.pause();
-				myVideo.VideoPlayer.Pause();
+				PauseAllVideos();
 				Application.OpenURL("http://www.lafeltrinelli.it/libri/nathan-filer/chiedi-alla-luna/9788807030437");
 			}
 			
@@ -402,7 +469,7 @@ public class GUIEditoria : MonoBehaviour {
 			                          60 * SizeFactor,
 			                          80 * SizeFactor,
 			                          80 * SizeFactor), "", infoStyle)) {
-				myVideo.VideoPlayer.Pause();
+				PauseAllVideos();
 				if (!infoGUI)
 					StartCoroutine (infoGo());
 
@@ -423,7 +490,7 @@ public class GUIEditoria : MonoBehaviour {
 				//FACEBOOK
 				try 
 				{
-					myVideo.VideoPlayer.Pause();
+					PauseAllVideos();
 					stop = true;
 					//movieTexture.pause();
 					Dictionary<string, string[]> FeedProperties = null;

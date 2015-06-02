@@ -72,6 +72,8 @@ public class PostBuildProcessor : MonoBehaviour
 
 		proj.AddFrameworkToProject(target, "Accounts.framework", true);
 		proj.AddFrameworkToProject(target, "Social.framework", true);
+
+		proj.AddFrameworkToProject(target,"AssetsLibrary.framework",true);
 		
 		File.WriteAllText (projPath, proj.WriteToString ());
 		

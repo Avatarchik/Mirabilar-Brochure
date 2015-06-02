@@ -41,6 +41,9 @@ public class GUIApplicazioniIndustriali : MonoBehaviour {
 	
 	private float SizeFactor;
 
+	public string albumName = "Mirabilar";
+	bool isScreenShotSave;
+
 	// Use this for initialization
 	void Start () {
 		SizeFactor = GUIUtilities.SizeFactor;
@@ -178,6 +181,11 @@ public class GUIApplicazioniIndustriali : MonoBehaviour {
 		yield return 0;
 	}
 
+	void ScreenShotStatus(bool status)
+	{
+		isScreenShotSave = status;
+	}
+
 	void OnGUI() {
 		
 		//		if(GUIUtilities.ButtonWithText(new Rect(
@@ -312,6 +320,14 @@ public class GUIApplicazioniIndustriali : MonoBehaviour {
 			                          100 * SizeFactor), "", cameraStyle)) {
 				//Debug.Log("Clicked the button!");
 				StartCoroutine(photoGo());
+
+				#if UNITY_IOS
+
+				StartCoroutine(ScreenShotBridge.SaveScreenShot(albumName,ScreenShotStatus));	
+				isScreenShotSave = false;
+
+				#endif
+
 			}
 			
 			

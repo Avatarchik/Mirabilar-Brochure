@@ -61,6 +61,9 @@ public class GUIEditoria : MonoBehaviour {
 	private LayerMask layerMask = 1<<4;
 	
 	private bool selected = false;
+
+	bool isScreenShotSave = false;
+	public string albumName = "Mirabilar";
 	
 	// Use this for initialization
 	void Start () {
@@ -378,6 +381,11 @@ public class GUIEditoria : MonoBehaviour {
 		}
 	}
 
+	void ScreenShotStatus(bool status)
+	{
+		isScreenShotSave = status;
+	}
+
 	void OnGUI() {
 		
 		//		if(GUIUtilities.ButtonWithText(new Rect(
@@ -454,6 +462,13 @@ public class GUIEditoria : MonoBehaviour {
 			                          100 * SizeFactor), "", pioggiaStyle)) {
 				//Debug.Log("Clicked the button!"); CAMERA
 				StartCoroutine(photoGo());
+
+				#if UNITY_IOS
+								
+				isScreenShotSave = false;
+				StartCoroutine(ScreenShotBridge.SaveScreenShot(albumName,ScreenShotStatus));	
+				
+				#endif
 			}
 			
 			if (GUI.Button (new Rect (butXDX,

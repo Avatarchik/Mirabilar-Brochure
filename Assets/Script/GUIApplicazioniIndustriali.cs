@@ -42,7 +42,7 @@ public class GUIApplicazioniIndustriali : MonoBehaviour {
 	private float SizeFactor;
 
 	public string albumName = "Mirabilar";
-	bool isScreenShotSave;
+	bool isScreenShotSave = false;
 
 	// Use this for initialization
 	void Start () {
@@ -323,11 +323,10 @@ public class GUIApplicazioniIndustriali : MonoBehaviour {
 
 				#if UNITY_IOS
 
-				for (int i= 0; i < 2; i++)
-				{
-					isScreenShotSave = false;
-					StartCoroutine(ScreenShotBridge.SaveScreenShot(albumName,ScreenShotStatus));	
-				}
+
+				isScreenShotSave = false;
+				StartCoroutine(ScreenShotBridge.SaveScreenShot(albumName,ScreenShotStatus));	
+				
 				#endif
 
 			}

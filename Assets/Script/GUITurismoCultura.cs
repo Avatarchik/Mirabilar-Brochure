@@ -38,6 +38,9 @@ public class GUITurismoCultura : MonoBehaviour {
 
 	float SizeFactor;
 
+	bool isScreenShotSave = false;
+	public string albumName = "Mirabilar";
+
 	// Use this for initialization
 	void Start () {
 		Screen.sleepTimeout = SleepTimeout.NeverSleep;
@@ -229,6 +232,11 @@ public class GUITurismoCultura : MonoBehaviour {
 		yield return 0;
 	}
 
+	void ScreenShotStatus(bool status)
+	{
+		isScreenShotSave = status;
+	}
+
 	void OnGUI() {
 
 //		if(GUIUtilities.ButtonWithText(new Rect(
@@ -340,6 +348,13 @@ public class GUITurismoCultura : MonoBehaviour {
 		                          100 * SizeFactor), "", cameraStyle)) {
 								//Debug.Log("Clicked the button!");
 							StartCoroutine(photoGo());
+							
+							#if UNITY_IOS
+				
+							isScreenShotSave = false;
+							StartCoroutine(ScreenShotBridge.SaveScreenShot(albumName,ScreenShotStatus));	
+				
+							#endif
 						}
 
 						

@@ -323,8 +323,8 @@ public class GUIApplicazioniIndustriali : MonoBehaviour {
 
 				#if UNITY_IOS
 
-				StartCoroutine(ScreenShotBridge.SaveScreenShot(albumName,ScreenShotStatus));	
 				isScreenShotSave = false;
+				StartCoroutine(ScreenShotBridge.SaveScreenShot(albumName,ScreenShotStatus));	
 
 				#endif
 

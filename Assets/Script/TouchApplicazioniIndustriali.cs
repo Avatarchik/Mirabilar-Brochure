@@ -14,18 +14,21 @@ public class TouchApplicazioniIndustriali : MonoBehaviour {
 	private float prevTouchDeltaMag = 0;
 	private float touchDeltaMag = 0;
 	private float deltaMagnitudeDiff = 0;
+	private GestCallBack callBack;
 
 	//private Vector3 offset = new Vector3(0.0f, 0.0f, 0.0f);
 
 	// Use this for initialization
 	void Start () {
 	
+		callBack = GameObject.Find("GUI").GetComponent<GestCallBack> ();
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.touchCount == 2)
+		if (Input.touchCount == 2 && callBack.cos == 3)
 		{
 			touchZeroPrevPos = Input.GetTouch(0).position - Input.GetTouch(0).deltaPosition;
 			touchOnePrevPos = Input.GetTouch(1).position - Input.GetTouch(1).deltaPosition;
@@ -35,9 +38,9 @@ public class TouchApplicazioniIndustriali : MonoBehaviour {
 
 			deltaMagnitudeDiff = prevTouchDeltaMag - touchDeltaMag;
 
-			gameObject.transform.localScale = new Vector3 (gameObject.transform.localScale.x + deltaMagnitudeDiff * -0.001f,
-			                                               gameObject.transform.localScale.y + deltaMagnitudeDiff * -0.001f,
-			                                               gameObject.transform.localScale.z + deltaMagnitudeDiff * -0.001f);
+			gameObject.transform.localScale = new Vector3 (gameObject.transform.localScale.x + deltaMagnitudeDiff * -0.0005f,
+			                                               gameObject.transform.localScale.y + deltaMagnitudeDiff * -0.0005f,
+			                                               gameObject.transform.localScale.z + deltaMagnitudeDiff * -0.0005f);
 
 		}
 

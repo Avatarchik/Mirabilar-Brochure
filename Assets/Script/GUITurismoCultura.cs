@@ -363,7 +363,7 @@ public class GUITurismoCultura : MonoBehaviour {
 		                         440 * SizeFactor), goTouchIcon.rectBack3);
 		
 		if (GUI.Button(new Rect(20 * SizeFactor,
-		                        140 * SizeFactor,
+		                        150 * SizeFactor,
 		                        50 * SizeFactor,
 		                        50 * SizeFactor), "", goTouchIcon.exitStyle))
 		{

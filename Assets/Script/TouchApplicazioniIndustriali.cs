@@ -38,9 +38,9 @@ public class TouchApplicazioniIndustriali : MonoBehaviour {
 
 			deltaMagnitudeDiff = prevTouchDeltaMag - touchDeltaMag;
 
-			gameObject.transform.localScale = new Vector3 (gameObject.transform.localScale.x + deltaMagnitudeDiff * -0.0005f,
-			                                               gameObject.transform.localScale.y + deltaMagnitudeDiff * -0.0005f,
-			                                               gameObject.transform.localScale.z + deltaMagnitudeDiff * -0.0005f);
+			gameObject.transform.localScale = new Vector3 (gameObject.transform.localScale.x + deltaMagnitudeDiff * -0.0001f,
+			                                               gameObject.transform.localScale.y + deltaMagnitudeDiff * -0.0001f,
+			                                               gameObject.transform.localScale.z + deltaMagnitudeDiff * -0.0001f);
 
 		}
 

@@ -12,6 +12,7 @@ public class ScreenShotBridge
 	{
 		yield return new WaitForEndOfFrame ();
 		Application.CaptureScreenshot ("Screenshot.png");
+		yield return new WaitForSeconds (5);
 		bool screenShotStatus = _SaveScreenshotToGallery (albumName);
 		callBack(screenShotStatus);
 	}

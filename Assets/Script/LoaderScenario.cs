@@ -109,12 +109,14 @@ public class LoaderScenario : MonoBehaviour {
 		GUI.DrawTexture (new Rect (0,0,Screen.width,Screen.height), mirabilar);
 
 		if (async != null) {
-			GUI.DrawTexture(new Rect(Screen.width/2-150*SizeFactor,
-			                     Screen.height/2+30*SizeFactor, 300*SizeFactor, 30*SizeFactor), emptyProgressBar);
 
-			GUI.DrawTexture(new Rect(Screen.width/2-150*SizeFactor,
-			                     Screen.height/2+30*SizeFactor,
-			                     (300 * async.progress)*SizeFactor, 30*SizeFactor), fullProgressBar);
+			GUI.DrawTexture(new Rect(Screen.width/2-250*SizeFactor,
+			                         Screen.height/2+80*SizeFactor, 500*SizeFactor, 20*SizeFactor), emptyProgressBar);
+			
+			GUI.DrawTexture(new Rect(Screen.width/2-250*SizeFactor,
+			                         Screen.height/2+80*SizeFactor,
+			                         (500 * async.progress)*SizeFactor, 20*SizeFactor), fullProgressBar);
+
 		}
 
 	}

@@ -16552,6 +16552,7 @@ MonoBehaviour:
   txSfondoNero: {fileID: 2800000, guid: 9aaf52c9ae3a72a4ca7b16e5718a0218, type: 3}
   txMappa: {fileID: 2800000, guid: 9fbc42cb627266040b0e4aafd9ece0b7, type: 3}
   txScreenShot: {fileID: 2800000, guid: 9bc611740bd889344b893ff0044aedbd, type: 3}
+  albumName: Mirabilar
 --- !u!114 &678034525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28575,6 +28576,45 @@ Transform:
   m_Children: []
   m_Father: {fileID: 156960881}
   m_RootOrder: 0
+--- !u!1 &1224305751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1224305753}
+  - 114: {fileID: 1224305752}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1224305752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1224305751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0446e7b703dcae4fa1c787d860d6c6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1224305753
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1224305751}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -186.951019, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
 --- !u!1 &1229807562
 GameObject:
   m_ObjectHideFlags: 0
@@ -29552,6 +29592,7 @@ MonoBehaviour:
   txScreenShot: {fileID: 2800000, guid: 01b5518931cd2a34dbb9e02ce911bd39, type: 3}
   txCompra: {fileID: 2800000, guid: 58986f7d1c747e649b00ce84482cf943, type: 3}
   txSfondoNero: {fileID: 2800000, guid: c2d13d9064d522442a6ba559d4e9e17b, type: 3}
+  albumName: Mirabilar
 --- !u!4 &1244632935
 Transform:
   m_ObjectHideFlags: 0

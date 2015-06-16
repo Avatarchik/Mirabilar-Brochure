@@ -40,14 +40,14 @@ public class GUIEditoria : MonoBehaviour {
 	private  float butXDX ;
 	private  float butXSXExit;
 	private  float butXDXInfo;
-	private float timer = 0;
+	//private float timer = 0;
 	private bool endMove = true;
 	private bool freeUpdate = false;
 	private bool stop = false;
 	private bool guiPlay = false;
 	private bool guiPause = false;
 	private bool condividi = false;
-	private bool freeTimer = false;
+//	private bool freeTimer = false;
 	private bool biografia = false;
 	private bool infoGUI = false;
 	private GestCallBack callBack;
@@ -191,7 +191,7 @@ public class GUIEditoria : MonoBehaviour {
 		{
 			// deselect metaio man if touch has ended
 			selected = false;
-			freeTimer = true;
+			//freeTimer = true;
 		}
 	}
 
@@ -510,7 +510,7 @@ public class GUIEditoria : MonoBehaviour {
 					PauseAllVideos();
 					stop = true;
 					//movieTexture.pause();
-					Dictionary<string, string[]> FeedProperties = null;
+					//Dictionary<string, string[]> FeedProperties = null;
 					FB.Login("public_profile,email,user_friends,publish_actions", LoginCallback);
 					condividi = true;
 					//FB.Login("publish_actions", LoginCallback);

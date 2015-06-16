@@ -54,7 +54,7 @@ public class TouchIcon : MonoBehaviour
 	private int countNextGallery = 0;
 
     private string stringMail = "";
-    private string error = "";
+    //private string error = "";
 
     private Rect rectGallery;
 	private Rect cutGallery;
@@ -713,7 +713,7 @@ public class TouchIcon : MonoBehaviour
 				}
 				catch (System.Exception e)
 				{
-					error = e.ToString();
+					//error = e.ToString();
 					invioAnimImm = false;
 					nonInviatoAnim = true;
 					StartCoroutine(AnimNonInvioMail());
@@ -965,7 +965,7 @@ public class TouchIcon : MonoBehaviour
 				}
 				catch (System.Exception e)
 				{
-					error = e.ToString();
+					//error = e.ToString();
 					invioAnimImm = false;
 					nonInviatoAnim = true;
 					StartCoroutine(AnimNonInvioMail());

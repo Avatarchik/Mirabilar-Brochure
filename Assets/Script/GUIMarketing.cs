@@ -62,7 +62,8 @@ public class GUIMarketing : MonoBehaviour {
 
 	private TouchMarketing touchMark;
 
-
+	private string albumName = "Mirabilar";
+	bool isScreenShotSave = false;
 	
 	float SizeFactor;
 	
@@ -312,6 +313,11 @@ public class GUIMarketing : MonoBehaviour {
 		
 		yield return 0;
 	}
+
+	void ScreenShotStatus(bool status)
+	{
+		isScreenShotSave = status;
+	}
 	
 	void OnGUI() {
 		
@@ -441,6 +447,15 @@ public class GUIMarketing : MonoBehaviour {
 			                          100 * SizeFactor), "", cameraStyle)) {
 				//Debug.Log("Clicked the button!");
 				StartCoroutine(photoGo());
+
+				#if UNITY_IOS
+				
+				
+				isScreenShotSave = false;
+				StartCoroutine(ScreenShotBridge.SaveScreenShot(albumName,ScreenShotStatus));	
+				
+				#endif
+
 			}
 
 			if (GUI.Button (new Rect (butXDX,

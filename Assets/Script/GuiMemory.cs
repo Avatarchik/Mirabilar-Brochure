@@ -47,8 +47,10 @@ public class GuiMemory : MonoBehaviour {
 	private bool endMove = true;
 	private bool freeUpdate = false;
 	private bool infoGUI = false;
-	private string error = "";
+//	private string error = "";
 
+	private string albumName = "Mirabilar";
+	bool isScreenShotSave = false;
 
 	float SizeFactor;
 
@@ -78,7 +80,7 @@ public class GuiMemory : MonoBehaviour {
 		}
 		catch (System.Exception er)
 		{
-			error = er.ToString();
+			//error = er.ToString();
 		}
 	}
 	
@@ -190,6 +192,11 @@ public class GuiMemory : MonoBehaviour {
 		
 		
 		yield return 0;
+	}
+
+	void ScreenShotStatus(bool status)
+	{
+		isScreenShotSave = status;
 	}
 
 	void OnGUI () {
@@ -344,6 +351,15 @@ public class GuiMemory : MonoBehaviour {
 			                          100 * SizeFactor), "", cameraStyle)) {
 				//Debug.Log("Clicked the button!");
 				StartCoroutine(photoGo());
+
+				#if UNITY_IOS
+				
+				
+				isScreenShotSave = false;
+				StartCoroutine(ScreenShotBridge.SaveScreenShot(albumName,ScreenShotStatus));	
+				
+				#endif
+
 			}
 
 			if (Level3.GetComponent<TouchCard>().win || Level2.GetComponent<TouchCard>().win || Level1.GetComponent<TouchCard>().win)

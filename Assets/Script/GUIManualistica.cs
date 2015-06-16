@@ -32,6 +32,9 @@ public class GUIManualistica : MonoBehaviour {
 	private GameObject scocca;
 	private GameObject tagPala;
 
+	private string albumName = "Mirabilar";
+	bool isScreenShotSave = false;
+
 	float SizeFactor;
 
 	// Use this for initialization
@@ -164,6 +167,11 @@ public class GUIManualistica : MonoBehaviour {
 		yield return 0;
 	}
 
+	void ScreenShotStatus(bool status)
+	{
+		isScreenShotSave = status;
+	}
+
 	void OnGUI() {
 
 //		if(GUIUtilities.ButtonWithText(new Rect(
@@ -269,6 +277,15 @@ public class GUIManualistica : MonoBehaviour {
 		                          100 * SizeFactor), "", cameraStyle)) {
 								//Debug.Log("Clicked the button!");
 							StartCoroutine(photoGo());
+							
+							#if UNITY_IOS
+				
+				
+							isScreenShotSave = false;
+							StartCoroutine(ScreenShotBridge.SaveScreenShot(albumName,ScreenShotStatus));	
+				
+							#endif
+							
 						}
 
 						

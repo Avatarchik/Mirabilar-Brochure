@@ -21,7 +21,7 @@ public class LoaderScenario : MonoBehaviour {
 
 	private Texture comodo;
 	private float SizeFactor = 1;
-	private bool stopThread = false;
+	//private bool stopThread = false;
 
 	// Use this for initialization
 	void Start () {

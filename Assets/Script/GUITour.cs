@@ -10,6 +10,9 @@ public class GUITour : MonoBehaviour {
 	
 	private float SizeFactor;
 
+	public string albumName = "Mirabilar";
+	bool isScreenShotSave = false;
+
 	// Use this for initialization
 	void Start () {
 		Screen.sleepTimeout = SleepTimeout.NeverSleep;
@@ -68,6 +71,11 @@ public class GUITour : MonoBehaviour {
 		yield return 0;
 	}
 
+	void ScreenShotStatus(bool status)
+	{
+		isScreenShotSave = status;
+	}
+
 	void OnGUI()
 	{
 		if (GUI.Button (new Rect (60 * SizeFactor,
@@ -84,6 +92,14 @@ public class GUITour : MonoBehaviour {
 		                          100 * SizeFactor), "", cameraStyle)) {
 			//Debug.Log("Clicked the button!");
 			StartCoroutine(photoGo());
+
+			#if UNITY_IOS
+			
+			
+			isScreenShotSave = false;
+			StartCoroutine(ScreenShotBridge.SaveScreenShot(albumName,ScreenShotStatus));	
+			
+			#endif
 		}
 
 		if (switchSwipe && !Input.gyro.enabled)

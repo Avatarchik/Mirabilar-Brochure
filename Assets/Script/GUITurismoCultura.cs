@@ -34,7 +34,7 @@ public class GUITurismoCultura : MonoBehaviour {
 
 	private TouchIcon goTouchIcon;
 
-	private string sDebug = "";
+//	private string sDebug = "";
 
 	float SizeFactor;
 
